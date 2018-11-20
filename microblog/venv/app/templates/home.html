@@ -1,0 +1,28 @@
+<html lang="en">
+<meta charset="utf-8"/>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="{{url_for('static',filename='processing.js')}}"></script>
+</head>
+<body>
+	 <div class="container">
+	<p>Hello</p><p id="user">{{user.username}}</p>
+       
+        <h2 class="form-signin-heading"> upload file and Generate questions</h2>
+	<input type="text" id="user"  name="user" value="{{user.username}}"></input>
+        <input type="file" id="inputUsername" name="username" id="fileToUpload" class="form-control" required autofocus>      
+        <input type="submit" value="Upload File" name="submit" onclick="push1()" id="button"></input>
+	  
+    	 </div>  
+	
+	<form action = "/index" method = "post" name="form2">
+    Enter the text:
+    <input type="text" name="fileToUpload" id="fileToUpload"></input>
+    <p style="display:none" name="user">{{user.username}}</p>
+    <br><br>
+    <input type="submit" value="Upload File" name="submit" onclick="push()" id="button"></input>
+	</form>	
+</body>
+</html>
+
+
